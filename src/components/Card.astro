@@ -1,4 +1,8 @@
+---
+const { title, description } = Astro.props;
+---
+
 <div class="card">
-    <h2>About</h2>
-    <p>This is a card component</p>
+    <h2>{title}</h2>
+    <p>{description}</p>
 </div>
