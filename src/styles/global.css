@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+:root {
+    --font-jost: 'Jost', sans-serif;
+    --font-prata: 'Prata', serif;
+    --font-rubik: 'Rubik', sans-serif;
+}   
+
+html {
+    font-family: var(--font-rubik);
+    font-style: normal;
+    background-color: #000;
+}
+
+#F5{
+    font-family: var(--font-prata);
+}
+
+
+
+        
