@@ -4,18 +4,31 @@
     --font-jost: 'Jost', sans-serif;
     --font-prata: 'Prata', serif;
     --font-rubik: 'Rubik', sans-serif;
+    --font-playfair: 'Playfair Display', serif;
 }   
 
 html {
-    font-family: var(--font-rubik);
-    font-style: normal;
+    font-family: var(--font-playfair);
     background-color: #000;
+    color: #fff;
+    background: linear-gradient(to right, #000, #000000);
+}
+p{
+    font-family: var(--font-jost);
 }
 
 #F5{
     font-family: var(--font-prata);
 }
 
+#Logo {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  #Logo.aparecer {
+    opacity: 1;
+  }
 
 
         
