@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@fontsource-variable/jost": "^5.2.5",
+    "@fontsource-variable/playfair-display": "^5.2.5",
     "@fontsource-variable/rubik": "^5.2.5",
     "@fontsource/prata": "^5.2.5",
     "@tailwindcss/vite": "^4.0.12",
