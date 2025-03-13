@@ -1,73 +1,118 @@
 <header class="fixed w-full bg-black/80 backdrop-blur-sm z-50">
-  <nav class="container mx-auto m-10 px-4 py-4 md:m-5 md:mx-auto lg:m-5 lg:mx-auto">
-    <div class="flex items-center justify-between mt-6">
+  <nav
+    class="container mx-auto px-6 py-4"
+  >
+    <div class="flex items-center justify-between mt-6 ">
       <!-- Botón de menú móvil -->
-      <button id="menuButton" class="bg-white rounded-full p-6 md:p-2 lg:hidden">
-        <img src="./menu.svg" alt="Menu" class="w-16 h-16">
+      <button
+        id="menuButton"
+        class="bg-white rounded-full p-0 md:p-4 lg:hidden"
+      >
+        <img src="./menu.svg" alt="Menu" class="w-10  h-10" />
       </button>
-      
+
       <!-- Logo -->
-      <a href="/" id="F5" class="text-6xl font-bold text-white">
-        F5
-      </a>
-      
+      <a href="/" id="F5" class="text-3xl font-bold text-white md:text-4xl"> F5 </a>
+
       <!-- Menú de navegación para pantallas grandes -->
       <ul class="hidden lg:flex space-x-8 text-white text-2xl">
-        <li><a href="#home" class="hover:text-gray-400 transition-colors">Home</a></li>
-        <li><a href="#about" class="hover:text-gray-400 transition-colors">About</a></li>
-        <li><a href="#music" class="hover:text-gray-400 transition-colors">Music</a></li>
-        <li><a href="#events" class="hover:text-gray-400 transition-colors">Events</a></li>
+        <li>
+          <a href="#home" class="hover:text-gray-400 transition-colors">Home</a>
+        </li>
+        <li>
+          <a href="#about" class="hover:text-gray-400 transition-colors"
+            >About</a>
+        </li>
+        <li>
+          <a href="#music" class="hover:text-gray-400 transition-colors"
+            >Music</a>
+        </li>
+        <li>
+          <a href="#events" class="hover:text-gray-400 transition-colors"
+            >Events</a>
+        </li>
       </ul>
     </div>
   </nav>
 </header>
 
 <!-- Menú móvil con animación -->
-<div id="mobileMenu" class="fixed inset-0 bg-black/95 z-50 flex flex-col items-center justify-center text-white text-2xl transform -translate-y-full transition-transform duration-300 ease-in-out">
-  <button id="closeButton" class="absolute mt-6 left-10 bg-white rounded-full p-6 md:p-2 md:top-9 md:left-8">
-    <img src="./cancel.svg" alt="Cancel" class="w-16 h-16">
+<div
+  id="mobileMenu"
+  class="fixed inset-0 bg-black/95 z-50 flex flex-col 
+  items-center justify-center text-white text-2xl transform -translate-y-full transition-transform duration-300 ease-in-out"
+>
+  <button
+    id="closeButton"
+    class="absolute left-7 top-10 bg-white rounded-full p-0 md:p-2 md:top-9 md:left-8"
+  >
+    <img
+      src="./cancel.svg"
+      alt="Cancel"
+      class="w-10 h-10 sm:w-5 sm:h-5 md:w-10 md:h-10"
+    />
   </button>
   <div class="w-full max-w-md mx-auto px-6">
-    <ul class="space-y-20 text-center">
-      <li><a href="#home" class="block hover:text-gray-400 transition-colors py-3 text-6xl lg:text-2xl">Home</a></li>
-      <li><a href="#about" class="block hover:text-gray-400 transition-colors py-3 text-6xl lg:text-2xl">About</a></li>
-      <li><a href="#music" class="block hover:text-gray-400 transition-colors py-3 text-6xl lg:text-2xl">Music</a></li>
-      <li><a href="#events" class="block hover:text-gray-400 transition-colors py-3 text-6xl lg:text-2xl">Events</a></li>
+    <ul class="space-y-10 text-center text-4xl">
+      <li>
+        <a
+          href="#home"
+          class="block hover:text-gray-400 transition-colors py-3 "
+          >Home</a>
+      </li>
+      <li>
+        <a
+          href="#about"
+          class="block hover:text-gray-400 transition-colors py-3  "
+          >About</a>
+      </li>
+      <li>
+        <a
+          href="#music"
+          class="block hover:text-gray-400 transition-colors py-3  "
+          >Music</a>
+      </li>
+      <li>
+        <a
+          href="#events"
+          class="block hover:text-gray-400 transition-colors py-3  "
+          >Events</a>
+      </li>
     </ul>
   </div>
 </div>
 
 <script>
   // JavaScript para controlar el menú móvil con animación
-  document.addEventListener('DOMContentLoaded', function() {
-    const menuButton = document.getElementById('menuButton');
-    const closeButton = document.getElementById('closeButton');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-    
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuButton = document.getElementById("menuButton");
+    const closeButton = document.getElementById("closeButton");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+
     // Función para abrir el menú
-    menuButton.addEventListener('click', function() {
+    menuButton.addEventListener("click", function () {
       // Mostrar el menú (animación de arriba hacia abajo)
-      mobileMenu.classList.remove('-translate-y-full');
-      document.body.classList.add('overflow-hidden'); // Previene el scroll
+      mobileMenu.classList.remove("-translate-y-full");
+      document.body.classList.add("overflow-hidden"); // Previene el scroll
     });
-    
+
     // Función para cerrar el menú
     function closeMenu() {
       // Ocultar el menú (animación de abajo hacia arriba)
-      mobileMenu.classList.add('-translate-y-full');
-      
+      mobileMenu.classList.add("-translate-y-full");
+
       // Esperar a que termine la animación antes de habilitar el scroll
       setTimeout(() => {
-        document.body.classList.remove('overflow-hidden');
+        document.body.classList.remove("overflow-hidden");
       }, 300); // Mismo tiempo que la duración de la transición
     }
-    
-    closeButton.addEventListener('click', closeMenu);
-    
+
+    closeButton.addEventListener("click", closeMenu);
+
     // Cerrar el menú cuando se hace clic en un enlace
-    mobileMenuLinks.forEach(link => {
-      link.addEventListener('click', closeMenu);
+    mobileMenuLinks.forEach((link) => {
+      link.addEventListener("click", closeMenu);
     });
   });
 </script>
