@@ -1,7 +1,13 @@
 ---
-import Grid from "./Grid.astro";
+import Grid from "../components/Grid.astro";
+import GridMovil from "../components/GridMovil.astro";
 ---
 
-<section id="home" class="h-screen flex items-center justify-center">
-  <Grid />
+<section id="home" class="min-h-screen flex items-center justify-center w-full">
+  <div class="hidden lg:block">
+    <Grid />
+  </div>
+  <div class="block lg:hidden w-full h-screen">
+    <GridMovil />
+  </div>
 </section>
