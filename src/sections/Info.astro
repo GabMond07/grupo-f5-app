@@ -1,12 +1,27 @@
+---
+import { Image } from "astro:assets";
+import instrumentos from "../assets/img/Intrumentos.jpg";
+import F5 from "../assets/img/F5-background.jpg";
+import members from "../assets/img/members.jpg";
+---
+
 <section id="about" class="h-screen flex items-center justify-center">
-  <div class="grid grid-cols-5 grid-rows-5 gap-10">
-    <div class="col-span-3 row-span-3 row-start-2 w-[300px] h-[300px] flex items-center justify-center bg-red-500">
-        <div class="bg-white/20  backdrop-blur-md w-[80%] h-[80%] rounded-md  border border-white/30">
-            <h2>Más información</h2>
+  <div class="flex flex-col">
+    <h1 class="text-4xl font-bold text-center mb-5 glow-effect">Tu fiesta, nuestro ritmo.</h1>
+    <div class="flex flex-row gap-6">
+        <div class="w-[500px] bg-black/10 backdrop-blur-3xl  rounded-4xl flex items-center justify-center">
+            <div class="flex flex-col p-5">
+                <h1 class="text-4xl font-bold">Directo desde San Miguel Xoxtla, Puebla</h1>
+                <h1 class="text-2xl mt-5">
+                    Con una rica mezcla de ritmos y estilos, su música te hará bailar y vibrar.
+                </h1>
+            </div>
+        </div>
+            <div class="w-[450px] h-[350px]">
+            <div class="flex flex-col items-center justify-center">
+                <Image src={members} alt="Instrumentos" class="rounded-4xl shadow-lg box-shadow-effect" />
+            </div>
         </div>
     </div>
-    <div class="col-span-2 col-start-4 row-start-2 bg-blue-500">2</div>
-    <div class="col-span-2 col-start-4 row-start-3 bg-green-500">3</div>
-    <div class="col-span-2 col-start-4 row-start-4 bg-yellow-500">4</div>
   </div>
 </section>

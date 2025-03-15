@@ -33,6 +33,10 @@ p{
     transform: translateY(-30px);
     animation: fadeInDown 2s ease forwards;
 }
+
+#home{
+    animation: fadeInDown 2s ease forwards;
+}
         
 @keyframes fadeInDown {
     0% {
@@ -44,19 +48,18 @@ p{
         transform: translateY(0);
     }
 }
+    
+.glow-effect {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6),
+                 0 0 15px rgba(255, 255, 255, 0.4),
+                 0 0 20px rgba(255, 255, 255, 0.2);
+  }
 
-.container-GrupoF5:has(#GrupoF5) #text-GrupoF5 {
-    opacity: 0;
-    display:block;
-    animation: fadeIn 2s ease forwards 1s; /* Retrasa el segundo h1 */
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-        
+  .neon-effect {
+    color: #fff;
+    text-shadow: 0 0 5px #fff,
+                 0 0 10px #fff,
+                 0 0 20px rgb(255, 255, 255),
+                 0 0 30px rgb(199, 247, 247),
+                 0 0 40px rgb(246, 255, 255);
+  }
