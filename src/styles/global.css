@@ -63,3 +63,22 @@ p{
                  0 0 30px rgb(199, 247, 247),
                  0 0 40px rgb(246, 255, 255);
   }
+
+#about{
+    animation: reveal linear both;
+    animation-timeline: scroll();
+    animation-range: entry 10% cover 30%;
+    
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        scale: 0.7;
+    }
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
