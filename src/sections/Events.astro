@@ -1,11 +1,54 @@
-<section id="events" class="h-screen flex items-center justify-center">
-    <h1>Eventos</h1>
+---
+// Definimos los eventos como un array de objetos
+const events = [
+  {
+    id: 1,
+    title: "Hackathon 2024",
+    date: "2024-04-15",
+    description: "Un evento para desarrolladores donde podrás mostrar tus habilidades",
+    image: "/images/hackathon.jpg"
+  },
+  {
+    id: 2,
+    title: "Workshop de React",
+    date: "2024-04-20",
+    description: "Aprende los fundamentos de React en este workshop práctico",
+    image: "/images/react-workshop.jpg"
+  },
+  {
+    id: 3,
+    title: "Conferencia Tech",
+    date: "2024-05-01",
+    description: "Conferencia sobre las últimas tendencias en tecnología",
+    image: "/images/tech-conference.jpg"
+  }
+];
+---
+
+<section id="events" class="min-h-screen py-20 flex justify-center items-center">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-12">Próximos Eventos</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {events.map((event) => (
+        <article class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+          <img 
+            src={event.image} 
+            alt={event.title}
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">{event.title}</h3>
+            <p class="text-gray-600 mb-4">{new Date(event.date).toLocaleDateString('es-ES', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+            })}</p>
+            <p class="text-gray-700">{event.description}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
 </section>
 
-<div class="party-lights-container">
-    <div class="party-light red-light light-1 pulse"></div>
-    <div class="party-light blue-light light-2 pulse"></div>
-    <div class="party-light green-light light-3 pulse"></div>
-    <div class="party-light purple-light light-4 pulse"></div>
-    <div class="party-light yellow-light light-5 pulse"></div>
-  </div>
