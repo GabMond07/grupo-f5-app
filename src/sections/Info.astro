@@ -7,19 +7,21 @@ import members from "../assets/img/members.jpg";
 
 <section id="about" class="h-screen flex items-center justify-center">
   <div class="flex flex-col">
-    <h1 class="text-4xl font-bold text-center mb-5 glow-effect">Tu fiesta, nuestro ritmo.</h1>
+    <h1 id="title-about" class="text-5xl font-bold text-center mb-5">Tu fiesta, nuestro ritmo.</h1>
     <div class="flex flex-row gap-6">
-        <div class="w-[500px] bg-black/10 backdrop-blur-3xl  rounded-4xl flex items-center justify-center">
-            <div class="flex flex-col p-5">
-                <h1 class="text-4xl font-bold">Directo desde San Miguel Xoxtla, Puebla</h1>
-                <h1 class="text-2xl mt-5">
-                    Con una rica mezcla de ritmos y estilos, su música te hará bailar y vibrar.
-                </h1>
+        <div class="w-[500px] bg-black/10 backdrop-blur-xl rounded-4xl flex items-center justify-center">
+            <div class="flex flex-col p-5 text-center">
+                <h1 class="text-3xl font-bold">¿Quienes somos?</h1>
+                <p class="text-xl mt-5">
+                    <span class="font-bold">Directo desde San Miguel Xoxtla, Puebla</span>
+                    Con una rica mezcla de ritmos y estilos, nuestra música te hará bailar y vibrar.
+                </p> 
             </div>
         </div>
-            <div class="w-[450px] h-[350px]">
+            <div class="w-[500px] h-[350px]">
             <div class="flex flex-col items-center justify-center">
-                <Image src={members} alt="Instrumentos" class="rounded-4xl shadow-lg box- " />
+                <div class="glow-effect-1"></div>
+                <Image src={members} alt="Instrumentos" class="rounded-4xl border-white border-2 shadow-lg" />
             </div>
         </div>
     </div>
