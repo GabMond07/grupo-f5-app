@@ -79,23 +79,22 @@ p{
 @keyframes reveal {
     0% {
         opacity: 0;
+        transform: translateY(-30px);
         scale: 0.7;
     }
     100% {
         opacity: 1;
+        transform: translateY(0);
         scale: 1;
     }
 }
 
 .glow-effect-1 {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at center, rgba(26, 26, 26, 0.76), rgba(255, 255, 255, 0.062) 70%);
+    width: 410px;
+    height: 370px;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.76), rgb(45, 66, 255) 70%);
     filter: blur(20px);
-    z-index: -1;
     transform: scale(1.2);
   }
 
@@ -129,4 +128,111 @@ p{
     100% {
       transform: scale(1.2) rotate(360deg);
     }
+  }
+
+    /* Efecto de estrellas */
+
+  .estrellas-contenedor {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .estrella {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    animation: brillar 3s infinite alternate;
+  }
+  
+  @keyframes brillar {
+    0% {
+      opacity: 0.1;
+      box-shadow: 0 0 5px #fff, 0 0 10px #fff;
+      transform: scale(0.8);
+    }
+    50% {
+      opacity: 0.8;
+      box-shadow: 0 0 15px #fff, 0 0 20px #fff, 0 0 25px #ffe100;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0.3;
+      box-shadow: 0 0 5px #fff, 0 0 10px #fff;
+      transform: scale(0.9);
+    }
+  }
+
+
+   /* Generamos estrellas con diferentes tamaños y posiciones */
+   .estrella:nth-child(1) {
+    width: 10px;
+    height: 10px;
+    top: 15%;
+    left: 20%;
+    animation-delay: 0.3s;
+    animation-duration: 3.5s;
+  }
+  
+  .estrella:nth-child(2) {
+    width: 5px;
+    height: 5px;
+    top: 25%;
+    left: 40%;
+    animation-delay: 0.5s;
+    animation-duration: 2.8s;
+  }
+  
+  .estrella:nth-child(3) {
+    width: 6px;
+    height: 6px;
+    top: 10%;
+    left: 75%;
+    animation-delay: 0.8s;
+    animation-duration: 4s;
+  }
+
+  .estrella:nth-child(4) {
+    width: 4px;
+    height: 4px;
+    top: 45%;
+    left: 85%;
+    animation-delay: 1.2s;
+    animation-duration: 3.2s;
+  }
+  
+  .estrella:nth-child(5) {
+    width: 5px;
+    height: 5px;
+    top: 75%;
+    left: 35%;
+    animation-delay: 0.7s;
+    animation-duration: 3.7s;
+  }
+  
+  .estrella:nth-child(6) {
+    width: 3px;
+    height: 3px;
+    top: 50%;
+    left: 55%;
+    animation-delay: 1.5s;
+    animation-duration: 4.2s;
+  }
+
+  .estrella:nth-child(7) {
+    width: 7px;
+    height: 7px;
+    top: 80%;
+    left: 65%;
+    animation-delay: 1.5s;
+    animation-duration: 4.2s;
+  }
+
+  .estrella:nth-child(8) {
+    width: 5px;
+    height: 5px;
+    top: 88%;
+    left: 15%;
+    animation-delay: 1.5s;
+    animation-duration: 4.2s;
   }
