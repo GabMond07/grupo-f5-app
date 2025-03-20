@@ -1,7 +1,13 @@
+---
+import Stars from "../components/Stars.astro";
+
+---
+
 <div class="grid grid-cols-5 grid-rows-5 gap-4">
   <div
     class="col-span-3 row-span-4 w-[750px] h-auto flex items-center justify-center"
   >
+    <Stars />
     <div class="flex flex-col text-center">
       <h1 class="text-8xl font-bold glow-effect">Grupo F5</h1>
       <p class="text-2xl p-5">
@@ -11,7 +17,9 @@
         </span><br />
         Originarios de San Miguel Xoxtla, <br /> 📍Puebla, México
       </p>
-      <p class="text-xl p-2">Contacto directo: <span class="font-bold">222 920 5162</span></p>
+      <p class="text-xl p-2">
+        Contacto directo: <span class="font-bold">222 920 5162</span>
+      </p>
     </div>
   </div>
   <div class="col-span-2 row-span-3 col-start-4">
@@ -40,21 +48,36 @@
     class="col-span-2 row-span-2 col-start-4 row-start-4 flex flex-col items-center justify-center"
   >
     <div class="flex gap-3">
-      <a href="https://www.instagram.com/grupof_5/" class="transition-transform hover:scale-110">
+      <a
+        href="https://www.instagram.com/grupof_5/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="transition-transform hover:scale-110"
+      >
         <img
           src="./instagram.svg"
           alt="Instagram"
           class="w-8 h-8 md:w-10 md:h-10"
         />
       </a>
-      <a href="https://www.facebook.com/profile.php?id=100057128656168" class="transition-transform hover:scale-110">
+      <a
+        href="https://www.facebook.com/profile.php?id=100057128656168"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="transition-transform hover:scale-110"
+      >
         <img
           src="./Facebook.svg"
           alt="Facebook"
           class="w-8 h-8 md:w-10 md:h-10"
         />
       </a>
-      <a href="https://wa.me/522213752079?text=Hola!%0AEstoy%20interesado%20en%20su%20servicio." class="transition-transform hover:scale-110">
+      <a
+        href="https://wa.me/522213752079?text=Hola!%0AEstoy%20interesado%20en%20su%20servicio."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="transition-transform hover:scale-110"
+      >
         <img
           src="./WhatsApp.svg"
           alt="chat on whatsapp"
