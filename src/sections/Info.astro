@@ -3,17 +3,18 @@ import Stars from "../components/Stars.astro";
 ---
 
 <section id="about"
-  class="min-h-screen flex flex-col items-center justify-center"
+  class="min-h-screen flex flex-col items-center justify-center py-10 md:py-24 lg:py-20"
 >
-  <div class="flex flex-row gap-10">
+  <div class="flex flex-col md:flex-col md:gap-0 md:py-20 lg:flex-row lg:gap-5 lg:py-10">
     <div
-      class="w-[500px] h-[470px] flex items-center justify-center">
-      <div class="flex flex-col items-center text-center">
+      class="w-[350px] h-[470px] md:w-[400px] lg:w-[500px] flex items-center justify-center ">
+      <div class="p-5 flex flex-col items-center text-center">
         <Stars />
-        <h1 class="text-3xl font-bold glow-effect">
-          ¡Nosotros ponemos la música y ustedes el ambiente!
+        <h1 class="text-2xl md:text-3xl font-bold glow-effect">
+          ¡Nosotros ponemos la música <br class="md:hidden" />
+           y ustedes el ambiente!
         </h1>
-        <p class="text-xl mt-5">
+        <p class="text-xl mt-5 mb-2">
           Con una rica mezcla de ritmos y estilos <br />
           nuestra música te hará bailar y vibrar.
         </p>
@@ -27,16 +28,16 @@ import Stars from "../components/Stars.astro";
             transition-colors duration-300"
           >Agenda tu fecha</a
         >
-        <p class="text-white text-xl mt-10">¡No te vas a arrepentir!</p>
+        <p class="text-white text-2xl mt-10 font-bold">¡No te vas a arrepentir!</p>
       </div>
     </div>
-    <div class="w-[500px]">
-      <div class="flex flex-col items-center justify-center">
-        <div class="glow-effect-1"></div>
+    <div class="w-auto h-[370px] md:w-full md:h-[450px] lg:w-[550px] lg:h-[450px] felx flex-col items-center justify-center">
+      <div class="mt-0 flex items-center justify-center">
+        <div class="glow-effect-1 w-[230px] h-[250px] md:w-[400px] md:h-[370px] lg:w-[400px] lg:h-[380px]"></div>
         <img
           src="members.avif"
           alt="Miembros del grupo F-5"
-          class="rounded-4xl z-10"
+          class="mt-0 rounded-4xl z-20 w-auto h-[300px] md:h-[410px] lg:h-[450px]"
         />
       </div>
     </div>
