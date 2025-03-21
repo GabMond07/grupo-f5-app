@@ -113,9 +113,6 @@ p{
 
 .glow-effect-1 {
     position: absolute;
-    top: 22%;
-    width: 410px;
-    height: 370px;
     background: radial-gradient(circle at center, rgba(255, 255, 255, 0.76), rgb(45, 66, 255) 70%);
     filter: blur(20px);
     transform: scale(1.2);
@@ -124,10 +121,6 @@ p{
 
   .glow-effect-2 {
     position: absolute;
-    top: -20px;
-    left: -20px;
-    width: calc(100% + 40px);
-    height: calc(100% + 40px);
     background: linear-gradient(45deg, #4169e1, #9400d3);
     filter: blur(30px);
     z-index: -1;
