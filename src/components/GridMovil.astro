@@ -1,42 +1,84 @@
-<div class="grid sm:w-screen sm:h-screen">
-  <div id="container-GrupoF5" class="flex flex-col justify-center items-center text-center mt-10 md:mt-10 ">
-    <img src="/Logo01.svg" alt="Logo del grupo F5" id="logo"
-    class="w-[250px] h-[250px] md:w-[300px] md:h-[300px]"
+---
+import Stars from "../components/Stars.astro";
+---
+
+<div class="grid min-h-screen grid-center">
+  <div
+    id="container-GrupoF5"
+    class="flex flex-col justify-center items-center text-center py-20 md:py-16"
+  >
+    <Stars />
+    <img
+      src="/Logo01.svg"
+      alt="Logo del grupo F5"
+      id="logo"
+      class="w-[160px] h-[160px] md:w-[220px] md:h-[220px]"
     />
-    <h1 id="GrupoF5" class="font-bold text-3xl md:text-5xl">Grupo F5</h1>
-    <p id="text-GrupoF5" class="leading-12 text-[20px] md:text-3xl">
-      💃 Grupo de música versátil 🕺<br>
-      <span class="font-bold text-[20px] md:text-3xl   ">¡Con más de 6 años de trayectoria! </span><br />
-      Originarios de San Miguel Xoxtla, <br> 📍Puebla, México
+    <h1 id="GrupoF5" class="font-bold text-xl md:text-3xl">Grupo F5</h1>
+    <p id="text-GrupoF5" class="leading-10 text-xl md:text-xl">
+      💃 Grupo de música versátil 🕺<br />
+      <span class="font-bold text-xl md:text-2xl"
+        >¡Con más de 6 años de trayectoria!
+      </span><br />
+      Originarios de San Miguel Xoxtla, <br /> 📍Puebla, México
     </p>
-    <p class="text-[25px] p-2">222 920 5162</p>
-    <div class="gap-3 mb-5 w-full items-center flex flex-col mt-10 md:flex md:flex-row md:justify-center md:gap-10">
-        <button
-          class="md:text-3xl md:py-4 md:px-28 w-fit bg-white text-black rounded-lg 
-          font-bold text-2xl py-2 px-10  hover:bg-gray-200 transition-all duration-300"
-        >
-          Más información
-        </button>
-        <button
-          class="md:text-3xl md:py-4 md:px-28 w-fit bg-white text-black rounded-lg 
-          font-bold text-2xl py-2 px-10 hover:bg-gray-200 transition-all duration-300"
-        >
-          Follow us <span class="text-2xl md:text-3xl">❤️</span>
-        </button>
-      </div>
+    <p class="text-xl p-2 md:text-xl">222 920 5162</p>
+    <div
+      class="gap-3 w-full items-center flex flex-col mt-5 md:flex md:flex-row md:justify-center md:gap-5"
+    >
+      <button
+        class="md:text-xl md:py-2 md:px-14 w-fit bg-white text-black rounded-lg
+          font-bold text-xl py-2 px-5 hover:bg-gray-200 transition-all duration-300"
+      >
+        Más información
+      </button>
+      <button
+        class="md:text-xl md:py-2 md:px-14 w-fit bg-white text-black rounded-lg
+          font-bold text-xl py-2 px-5 hover:bg-gray-200 transition-all duration-300"
+      >
+        Follow us <span class="text-xl md:text-xl">❤️</span>
+      </button>
+    </div>
   </div>
-  <div id="container-redes" class="flex flex-col justify-center items-center m-2">
-    <div class="flex mt-2 gap-4 justify-center md:gap-10 md:mt-0">
-        <a href="#" class="">
-          <img src="./instagram.svg" alt="Instagram" class="w-14 h-14 sm:w-12 sm:h-12 md:w-14 md:h-14" />
-        </a>
-        <a href="#" class="">
-          <img src="./Facebook.svg" alt="Facebook" class="w-14 h-14 sm:w-12 sm:h-12 md:w-14 md:h-14" />
-        </a>
-        <a href="#" class="">
-            <img src="./WhatsApp.svg" alt="WhatsApp" class="w-14 h-14 sm:w-12 sm:h-12 md:w-14 md:h-14" />
-        </a>
-      </div>
-      <p class="text-xl p-4 ">@grupof_5</p>
+  <div id="container-redes" class="flex flex-col justify-center items-center">
+    <div class="flex mt-0 gap-4 justify-center md:gap-4 md:mt-0">
+      <a
+        href="https://www.instagram.com/grupof_5/"
+        class=""
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="./instagram.svg"
+          alt="Instagram"
+          class="w-12 h-12 sm:w-12 sm:h-12 md:w-14 md:h-14"
+        />
+      </a>
+      <a
+        href="https://www.facebook.com/profile.php?id=100057128656168"
+        class=""
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="./Facebook.svg"
+          alt="Facebook"
+          class="w-12 h-12 sm:w-12 sm:h-12 md:w-14 md:h-14"
+        />
+      </a>
+      <a
+        href="https://wa.me/522213752079?text=Hola!%0AEstoy%20interesado%20en%20su%20servicio."
+        class=""
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="./WhatsApp.svg"
+          alt="WhatsApp"
+          class="w-12 h-12 sm:w-12 sm:h-12 md:w-14 md:h-14"
+        />
+      </a>
+    </div>
+    <p class="text-xl p-4">@grupof_5</p>
   </div>
 </div>
