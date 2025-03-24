@@ -1,6 +1,6 @@
 ---
 import Stars from "../components/Stars.astro";
-
+import confetti from "canvas-confetti";
 ---
 
 <div class="grid grid-cols-5 grid-rows-5 gap-4">
@@ -38,8 +38,9 @@ import Stars from "../components/Stars.astro";
       </button>
       <button
         class="bg-white text-black px-4 py-2 rounded-md font-bold text-xl hover:bg-gray-400 transition-all duration-300"
+        id="confetti-button"
       >
-        Follow us <span class="text-x1">❤️</span>
+        <span class="text-x1 ">❤️</span>
       </button>
     </div>
   </div>
@@ -88,3 +89,14 @@ import Stars from "../components/Stars.astro";
     <p class="text-xl p-2">@grupof_5</p>
   </div>
 </div>
+
+<script>
+  const button = document.getElementById('confetti-button');
+  button.addEventListener('click', () => {
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+    });
+  });
+</script>
