@@ -1,6 +1,5 @@
 ---
 import Stars from "../components/Stars.astro";
-import confetti from "canvas-confetti";
 ---
 
 <div class="grid grid-cols-5 grid-rows-5 gap-4">
@@ -23,8 +22,8 @@ import confetti from "canvas-confetti";
     </div>
   </div>
   <div class="col-span-2 row-span-3 col-start-4">
-    <div class="flex justify-center items-center h-[224px]">
-      <img src="/Logo01.svg" alt="Logo del grupo F5" id="logo" class="w-56" />
+    <div class="flex justify-center items-center h-[150px]">
+      <img src="/Logo01.svg" alt="Logo del grupo F5" id="logo" class="w-auto h-[250px]" />
     </div>
   </div>
   <div
@@ -32,16 +31,19 @@ import confetti from "canvas-confetti";
   >
     <div class="flex gap-4">
       <button
-        class="bg-white text-black px-4 py-2 rounded-md font-bold text-xl hover:bg-gray-400 transition-all duration-300"
+        class="bg-white text-black px-4 py-2 rounded-full font-bold text-xl hover:bg-gray-400 transition-all duration-300"
       >
-        Más información
+        <a  
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://wa.me/522229205162?text=Hola!%0AEstoy%20interesado%20en%20su%20servicio.">
+        Más información</a>
       </button>
       <button
-        class="bg-white text-black px-4 py-2 rounded-md font-bold text-xl hover:bg-gray-400 transition-all duration-300"
+        class="bg-white text-black px-4 py-2 rounded-full font-bold text-xl hover:bg-gray-400 transition-all duration-300"
         id="confetti-button"
-      >
-        <span class="text-x1 ">❤️</span>
-      </button>
+      ><span class="w-fit text-x1 text-black ">¡Celebra con nosotros! 🎉</span>
+    </button>
     </div>
   </div>
   <div
@@ -74,7 +76,7 @@ import confetti from "canvas-confetti";
         />
       </a>
       <a
-        href="https://wa.me/522213752079?text=Hola!%0AEstoy%20interesado%20en%20su%20servicio."
+        href="https://wa.me/522229205162?text=Hola!%0AEstoy%20interesado%20en%20su%20servicio."
         target="_blank"
         rel="noopener noreferrer"
         class="transition-transform hover:scale-110"
