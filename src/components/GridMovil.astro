@@ -2,19 +2,19 @@
 import Stars from "../components/Stars.astro";
 ---
 
-<div class="grid min-h-screen grid-center">
+<div class="flex flex-col justify-center items-center min-h-screen py-16 ">
   <div
     id="container-GrupoF5"
-    class="flex flex-col justify-center items-center text-center py-20 md:py-16"
+    class="flex flex-col items-center text-center"
   >
     <Stars />
     <img
       src="/Logo01.svg"
       alt="Logo del grupo F5"
       id="logo"
-      class="w-[160px] h-[160px] md:w-[220px] md:h-[220px]"
+      class="w-auto h-[200px] md:w-[220px] md:h-[220px]"
     />
-    <h1 id="GrupoF5" class="font-bold text-xl md:text-3xl">Grupo F5</h1>
+    <h1 id="GrupoF5" class="font-bold text-4xl md:text-5xl mb-3">Grupo F5</h1>
     <p id="text-GrupoF5" class="leading-10 text-xl md:text-xl">
       💃 Grupo de música versátil 🕺<br />
       <span class="font-bold text-xl md:text-2xl"
@@ -22,26 +22,30 @@ import Stars from "../components/Stars.astro";
       </span><br />
       Originarios de San Miguel Xoxtla, <br /> 📍Puebla, México
     </p>
-    <p class="text-xl p-2 md:text-xl">222 920 5162</p>
+    <p class="text-xl font-sans p-2 md:text-xl">Contacto directo: <span class="font-bold">222 920 5162</span></p>
+  </div>
     <div
-      class="gap-3 w-full items-center flex flex-col mt-5 md:flex md:flex-row md:justify-center md:gap-5"
+      class="gap-4 w-full items-center flex flex-col mt-5 md:flex md:flex-row md:justify-center md:gap-5 "
     >
       <button
-        class="md:text-xl md:py-2 md:px-14 w-fit bg-white text-black rounded-lg
-          font-bold text-xl py-2 px-5 hover:bg-gray-200 transition-all duration-300"
+        class="md:text-xl md:py-2 md:px-14 w-fit bg-white text-black rounded-full
+          font-bold text-xl py-3 px-5 hover:bg-gray-200 transition-all duration-300"
       >
-        Más información
+      <a  
+      target="_blank"
+      rel="noopener noreferrer"
+      href="https://wa.me/522229205162?text=Hola!%0AEstoy%20interesado%20en%20su%20servicio.">
+      Más información</a>
       </button>
       <button
-        class="md:text-xl md:py-2 md:px-14 w-fit bg-white text-black rounded-lg
-          font-bold text-xl py-2 px-5 hover:bg-gray-200 transition-all duration-300"
-      >
-        Follow us <span class="text-xl md:text-xl">❤️</span>
+        class="md:text-xl md:py-2 md:px-14 w-fit bg-white rounded-full
+          font-bold text-xl py-3 px-5 hover:bg-gray-200 transition-all duration-300"
+          id="confetti-button-movil"
+      ><span class="w-fit text-x1 text-black ">¡Celebra con nosotros!🎉</span>
       </button>
     </div>
-  </div>
-  <div id="container-redes" class="flex flex-col justify-center items-center">
-    <div class="flex mt-0 gap-4 justify-center md:gap-4 md:mt-0">
+  <div id="container-redes" class="flex flex-col justify-center items-center ">
+    <div class="mt-8 flex gap-4 justify-center md:gap-4 md:mt-10">
       <a
         href="https://www.instagram.com/grupof_5/"
         class=""
@@ -67,7 +71,7 @@ import Stars from "../components/Stars.astro";
         />
       </a>
       <a
-        href="https://wa.me/522213752079?text=Hola!%0AEstoy%20interesado%20en%20su%20servicio."
+        href="https://wa.me/522229205162?text=Hola!%0AEstoy%20interesado%20en%20su%20servicio."
         class=""
         target="_blank"
         rel="noopener noreferrer"
@@ -82,3 +86,14 @@ import Stars from "../components/Stars.astro";
     <p class="text-xl p-4">@grupof_5</p>
   </div>
 </div>
+
+<script>
+  const button = document.getElementById('confetti-button-movil');
+  button.addEventListener('click', () => {
+    confetti({
+      particleCount: 100,
+      spread: 50,
+      origin: { y: 0.6 },
+    });
+  });
+</script>
