@@ -53,4 +53,42 @@ import Stars from "../components/Stars.astro";
       </div>
     </div>
   </div>
+  <div class="flex flex-col items-center justify-center w-full h-full mt-10">
+    <div class="flex items-center justify-center mt-7">
+      <div class="fade-right w-full flex flex-col justify-center items-center">
+        <h1 class="text-4xl text-center mb-4">¿Quiénes somos?</h1>
+        <p class="leading-8 text-xl text-center mb-2">
+          Somos un grupo musical versátil con gran experiencia en ritmos y estilos.
+        </p>
+        <p class="leading-8 text-xl text-center mb-2">
+          Perfectos para animar cualquier tipo de evento: 
+          <ul class="text-xl glow-effect text-center">
+            <li>Bodas</li>
+            <li>Fiestas privadas</li>
+            <li>Eventos corporativos</li>
+            <li class="text-2xl text-center">¡Y mucho más!</li>
+          </ul>
+        </p>
+        <div class="glow-effect-2 h-40 w-40"></div>
+        <img src="./Party-F5.avif" alt="" class="w-auto h-72 rounded-full m-5" />
+      </div>
+    </div>
+  </div>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const elements = document.querySelectorAll(".fade-right, .clip-reveal");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target); // Deja de observar una vez animado
+      }
+    });
+  });
+
+  elements.forEach((el) => observer.observe(el));
+});
+</script>
