@@ -14,25 +14,25 @@ import Stars from "../components/Stars.astro";
     >
       <div class="p-5 flex flex-col items-center text-center">
         <Stars />
-        <h1 class="text-2xl md:text-3xl font-bold glow-effect">
+        <h1 class="text-3xl md:text-4xl font-bold glow-effect">
           ¡Nosotros ponemos la música <br class="md:hidden" />
           y ustedes el ambiente!
         </h1>
-        <p class="text-xl mt-5 mb-2">
-          Con una rica mezcla de ritmos y estilos <br />
+        <p class="text-xl mt-5">
+          Con una rica mezcla de ritmos y estilos
           nuestra música te hará bailar y vibrar.
         </p>
         <a
           href="https://wa.me/522229205162?text=Hola!%0AEstoy%20interesado%20en%20su%20servicio."
           target="_blank"
           rel="noopener noreferrer"
-          class="text-white text-xl
+          class="text-white text-2xl
             border-[3px] border-white rounded-full
-            px-4 py-2 mt-10 hover:bg-white hover:text-black
+            px-6 py-3 mt-10 hover:bg-white hover:text-black
             transition-colors duration-300"
           >Agendar fecha</a
         >
-        <p class="text-white text-2xl mt-10 font-bold">
+        <p class="animate-bounce animate-infinite animate-duration-[1500ms] animate-delay-[314ms] animate-ease-linear animate-normal text-white text-2xl mt-10 font-bold">
           ¡No te vas a arrepentir!
         </p>
       </div>
@@ -42,7 +42,7 @@ import Stars from "../components/Stars.astro";
     >
       <div class="mt-0 flex items-center justify-center">
         <div
-          class="glow-effect-1 w-[230px] h-[250px] md:w-[400px] md:h-[370px] lg:w-[400px] lg:h-[380px]"
+          class="glow-effect-1 w-[250px] h-[250px] md:w-[400px] md:h-[370px] lg:w-[400px] lg:h-[380px]"
         >
         </div>
         <img
@@ -53,24 +53,28 @@ import Stars from "../components/Stars.astro";
       </div>
     </div>
   </div>
-  <div class="flex flex-col items-center justify-center w-full h-full mt-10">
-    <div class="flex items-center justify-center mt-7">
-      <div class="fade-right w-full flex flex-col justify-center items-center">
-        <h1 class="text-4xl text-center mb-4">¿Quiénes somos?</h1>
-        <p class="leading-8 text-xl text-center mb-2">
-          Somos un grupo musical versátil con gran experiencia en ritmos y estilos.
+  <div class="flex flex-col items-center justify-center w-full h-min-screen mt-10">
+    <div class="flex flex-col items-center justify-center mt-7">
+      <div class="w-fit lg:w-1/2 flex flex-col justify-center items-center m-4">
+        <h1 class="glow-effect text-4xl text-center mb-4">¿Quiénes somos?</h1>
+        <p class="fade-right text-xl text-center mb-2">
+          Somos un grupo de músicos apasionados y profesionales, con 7 años de experiencia en la industria musical.<br>
         </p>
-        <p class="leading-8 text-xl text-center mb-2">
-          Perfectos para animar cualquier tipo de evento: 
-          <ul class="text-xl glow-effect text-center">
-            <li>Bodas</li>
-            <li>Fiestas privadas</li>
-            <li>Eventos corporativos</li>
-            <li class="text-2xl text-center">¡Y mucho más!</li>
-          </ul>
+          <img src="./Party-F5.avif" alt="Party" class="fade-right w-full rounded-full m-5 md:h[100px] md:w-auto: lg:h-[300px] lg:w-auto" />
+          <p class="fade-right text-xl text-center mb-5">
+          Nos encargamos de todos los detalles, desde la selección del repertorio hasta la producción del sonido, para que tú solo te preocupes de disfrutar
         </p>
-        <div class="glow-effect-2 h-40 w-40"></div>
-        <img src="./Party-F5.avif" alt="" class="w-auto h-72 rounded-full m-5" />
+      </div>
+      <div class="w-fit lg:w-1/2 flex flex-col justify-center items-center m-4 mt-5">
+        <h1 class="glow-effect text-4xl mb-4">¿Qué ofrecemos?</h1>
+        <ul class="text-2xl text-center">
+          <li class="fade-zoom list">🎼​ Música en vivo de alta calidad para todo tipo de eventos</li>
+          <li class="fade-zoom list">✨ Un espectáculo dinámico y entretenido</li>
+          <li class="fade-zoom list">🎙️ Equipo de sonido e iluminación de última generación.</li>
+          <li class="fade-zoom list">🫡 Atención personalizada para la planificación musical de tu evento.</li>
+        </ul>
+      </div>
+          <!-- <img src="./Party-F5.avif" alt="Party" class="w-full h-auto rounded-full mb-5" /> -->
       </div>
     </div>
   </div>
@@ -78,7 +82,8 @@ import Stars from "../components/Stars.astro";
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-  const elements = document.querySelectorAll(".fade-right, .clip-reveal");
+  const elements = document.querySelectorAll(".fade-right, .fade-zoom, .clip-reveal");
+  const listItems = document.querySelectorAll("ul li");
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -88,7 +93,22 @@ import Stars from "../components/Stars.astro";
       }
     });
   });
-
+  
   elements.forEach((el) => observer.observe(el));
+  
+  const observerli = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        entry.target.style.transitionDelay = `${index * 0.3 }s`; // Retraso progresivo
+        entry.target.classList.add("visible");
+        observerli.unobserve(entry.target); // Para que solo se active una vez
+      }
+    });
+  });
+
+  listItems.forEach((li) => {
+    li.classList.add("fade-left"); // Agregar clase inicial a cada <li>
+    observerli.observe(li);
+  });
 });
 </script>
