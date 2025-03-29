@@ -1,137 +1,93 @@
 ---
-import MusicGenreCard from '../components/MusicGenreCard.astro';
-import MusicGenreDialog from '../components/MusicGenreDialog.astro';
+import MusicGenreCard from "../components/MusicGenreCard.astro";
+import Genres from "../components/Genres.astro";
 ---
 
+<script>
+  import "../scripts/Animation.js";
+</script>
+<section
+  id="music"
+  class="min-h-screen flex flex-col justify-center items-center p-4 lg:p-20"
+>
+  <h1 class="text-3xl lg:text-5xl text-center font-bold mb-8 glow-effect">
+    Explora nuestro repertorio músical
+  </h1>
 
+  <div
+    class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 gap-4 lg:gap-10"
+  >
+    <div
+      class="fade-zoom col-span-1 hover:scale-105 transition-transform duration-300 w-auto"
+    >
+      {/* Género Baladas */}
+      <MusicGenreCard
+        genreId="Baladas"
+        genreName="Baladas"
+        songCount={19}
+        imageUrl="./Baladas.avif"
+      />
+    </div>
 
-<section id="music" class="min-h-screen flex flex-col justify-center items-center p-2">
-    <h1 class="text-3xl text-center font-bold mb-8 glow-effect">Explora nuestro repertorio músical</h1>   
+    {/*  Género Cumbia */}
+    <div
+      class="fade-zoom col-span-1 hover:scale-105 transition-transform duration-300"
+    >
+      <MusicGenreCard
+        genreId="cumbia"
+        genreName="Cumbia"
+        songCount={54}
+        imageUrl="./Cumbia.avif"
+      />
+    </div>
 
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-      {/* Rock genre */}
-      <div class="col-span-1">
-        {/* Género Rock */}
-        <MusicGenreCard 
-          genreId="Baladas"
-          genreName="Baladas"
-          songCount={42}
-          imageUrl="./Party-F5.avif"
-        />
-      </div>
-      
-      {/* Pop genre */}
-      <div class="col-span-1">
-        <MusicGenreCard 
-          genreId="pop"
-          genreName="Pop"
-          songCount={65}
-          imageUrl="/images/pop-genre.jpg"
-        />
-      </div>
-      
-      {/* Jazz genre */}
-      <div class="col-span-1">
-        <MusicGenreCard 
-          genreId="jazz"
-          genreName="Jazz"
-          songCount={28}
-          imageUrl="/images/jazz-genre.jpg"
-        />
-      </div>
-      
-      {/* Hip Hop genre */}
-      <div class="col-span-1">
-        <MusicGenreCard 
-          genreId="hiphop"
-          genreName="Hip Hop"
-          songCount={54}
-          imageUrl="/images/hiphop-genre.jpg"
-        />
-      </div>
-      
-      {/* Electronic genre */}
-      <div class="col-span-1">
-        <MusicGenreCard 
-          genreId="electronic"
-          genreName="Electrónica"
-          songCount={37}
-          imageUrl="/images/electronic-genre.jpg"
-        />
+    {/* Género Norteño */}
+    <div
+      class="fade-zoom col-span-1 hover:scale-105 transition-transform duration-300"
+    >
+      <MusicGenreCard
+        genreId="norteño"
+        genreName="Norteño"
+        songCount={9}
+        imageUrl="./Norteño.avif"
+      />
+    </div>
+
+    {/* Género Cumbia Norteña */}
+    <div
+      class="fade-zoom col-span-1 hover:scale-105 transition-transform duration-300"
+    >
+      <MusicGenreCard
+        genreId="cumbia norteña"
+        genreName="Cumbia Norteña"
+        songCount={12}
+        imageUrl="./Mexicano.avif"
+      />
+    </div>
+
+    {/* Género Rock-Pop */}
+    <div
+      class="fade-zoom col-span-1 hover:scale-105 transition-transform duration-300"
+    >
+      <MusicGenreCard
+        genreId="rock-pop"
+        genreName="Rock-Pop"
+        songCount={18}
+        imageUrl="./Rock-pop.avif"
+      />
+    </div>
+
+    {/* Género Iconos Mexicanos */}
+    <div
+      class="fade-zoom col-span-1 hover:scale-105 transition-transform duration-300"
+    >
+      <MusicGenreCard
+        genreId="iconos mexicanos"
+        genreName="Iconos Mexicanos"
+        songCount={9}
+        imageUrl="./Party-F5.avif"
+      />
+    </div>
+  </div>
+  <Genres />
 </section>
-
- {/* Diálogos para cada género */}
- <MusicGenreDialog 
- genreId="Baladas"
- genreName="Baladas"
- imageUrl="./Party-F5.avif"
- songs={[
-   { title: "Secreto de amor", artist: "Joan Sebastian" },
-   { title: "Stairway to Heaven", artist: "Led Zeppelin" },
-   { title: "Sweet Child O' Mine", artist: "Guns N' Roses" },
-   { title: "Smells Like Teen Spirit", artist: "Nirvana" },
-   { title: "Back in Black", artist: "AC/DC" },
-   { title: "Enter Sandman", artist: "Metallica" },
-   { title: "Welcome to the Jungle", artist: "Guns N' Roses" },
-   { title: "Hotel California", artist: "Eagles" }
- ]}
-/>
-
-<MusicGenreDialog 
- genreId="pop"
- genreName="Pop"
- imageUrl="/images/pop-genre.jpg"
- songs={[
-   { title: "Billie Jean", artist: "Michael Jackson" },
-   { title: "Shape of You", artist: "Ed Sheeran" },
-   { title: "Bad Guy", artist: "Billie Eilish" },
-   { title: "Uptown Funk", artist: "Mark Ronson ft. Bruno Mars" },
-   { title: "Blinding Lights", artist: "The Weeknd" },
-   { title: "Someone Like You", artist: "Adele" },
-   { title: "Watermelon Sugar", artist: "Harry Styles" },
-   { title: "Don't Start Now", artist: "Dua Lipa" }
- ]}
-/>
-
-<MusicGenreDialog 
- genreId="jazz"
- genreName="Jazz"
- imageUrl="/images/jazz-genre.jpg"
- songs={[
-   { title: "Take Five", artist: "Dave Brubeck" },
-   { title: "So What", artist: "Miles Davis" },
-   { title: "Take the 'A' Train", artist: "Duke Ellington" },
-   { title: "My Favorite Things", artist: "John Coltrane" },
-   { title: "Summertime", artist: "Ella Fitzgerald" },
-   { title: "Round Midnight", artist: "Thelonious Monk" }
- ]}
-/>
-
-<MusicGenreDialog 
- genreId="hiphop"
- genreName="Hip Hop"
- imageUrl="/images/hiphop-genre.jpg"
- songs={[
-   { title: "Lose Yourself", artist: "Eminem" },
-   { title: "Sicko Mode", artist: "Travis Scott" },
-   { title: "Alright", artist: "Kendrick Lamar" },
-   { title: "God's Plan", artist: "Drake" },
-   { title: "Empire State of Mind", artist: "Jay-Z ft. Alicia Keys" },
-   { title: "HUMBLE.", artist: "Kendrick Lamar" },
-   { title: "Hotline Bling", artist: "Drake" }
- ]}
-/>
-
-<MusicGenreDialog 
- genreId="electronic"
- genreName="Electrónica"
- imageUrl="/images/electronic-genre.jpg"
- songs={[
-   { title: "Strobe", artist: "Deadmau5" },
-   { title: "Levels", artist: "Avicii" },
-   { title: "One More Time", artist: "Daft Punk" },
-   { title: "Animals", artist: "Martin Garrix" },
-   { title: "Don't You Worry Child", artist: "Swedish House Mafia" },
-   { title: "Scary Monsters and Nice Sprites", artist: "Skrillex" }
- ]}
-/>
