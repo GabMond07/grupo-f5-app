@@ -268,7 +268,7 @@ p{
   .clip-reveal {
     opacity: 0;
     clip-path: inset(0 100% 0 0);
-    transition: opacity 3s ease-out, clip-path 3s ease-out;
+    transition: opacity 2s ease-out, clip-path 2s ease-out;
   }
   
   .clip-reveal.visible {
@@ -352,7 +352,7 @@ p{
   .fade-zoom {
     opacity: 0;
     transform: scale(0.8);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: opacity 2s ease-, transform 2s ease-out;
   }
   
   .fade-zoom.visible {
