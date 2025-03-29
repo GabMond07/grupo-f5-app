@@ -22,7 +22,7 @@ const events = [
       ¡Contáctanos!
     </h1>
     </p>
-    <div class="relative w-[350px] h-[350px] lg:w-[400px] lg:h-[400px] rounded-2xl border-3 border-white">
+    <!-- <div class="relative w-[350px] h-[350px] lg:w-[400px] lg:h-[400px] rounded-2xl border-3 border-white">
       <div class=""></div>
       <video
         id="videoPromocion"
@@ -35,7 +35,7 @@ const events = [
             <polygon points="10 8 16 12 10 16 10 8"></polygon>
           </svg>
         </div>
-    </div>
+    </div> -->
   </div>
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-5xl mx-auto">
@@ -77,47 +77,3 @@ const events = [
     </div>
   </div>
 </section>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const video = document.getElementById('videoPromocion');
-    const playIndicator = document.getElementById('playIndicator');
-    
-    if (video && playIndicator) {
-      // Pausa el video inicialmente
-      video.pause();
-      
-      // Función para reproducir el video
-      const playVideo = () => {
-        video.play()
-          .then(() => {
-            // Si se reproduce con éxito, quitar el indicador
-            playIndicator.style.display = 'none';
-            // También podemos activar el sonido
-            video.muted = false;
-          })
-          .catch(error => {
-            console.error('Error al reproducir el video:', error);
-          });
-      };
-      
-      // Añadir evento de clic al indicador
-      playIndicator.addEventListener('click', playVideo);
-      
-      // Evento para pausar/reproducir al hacer clic en el video
-      video.addEventListener('click', () => {
-        if (video.paused) {
-          playVideo();
-        } else {
-          video.pause();
-          playIndicator.style.display = 'flex';
-        }
-      });
-      
-      // Si el video termina (aunque tengas loop, por si acaso)
-      video.addEventListener('ended', () => {
-        playIndicator.style.display = 'flex';
-      });
-    }
-  });
-</script>
