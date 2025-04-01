@@ -2,33 +2,49 @@
 import Stars from "../components/Stars.astro";
 // Definimos los eventos como un array de objetos
 const events = [
-  // {
-  //   id: 1,
-  //   title: "Lounge Bar Club Retro",
-  //   date: "2025-03-29",
-  //   description: "San Miguel Xoxtla, Pue. Mex.",
-  //   image: "Logo Loungue Bar.avif",
-  // },
+  {
+    id: 1,
+    title: "Lounge Bar Club Retro",
+    date: "2025-03-29",
+    description: "San Miguel Xoxtla, Pue. Mex.",
+    image: "Logo Loungue Bar.avif",
+  },
 ];
 ---
 
 <section
   id="events"
-  class="min-h-screen py-24 flex flex-col justify-center items-center p-10 gap-10 relative"
+  class="py-24 flex flex-col justify-center items-center p-10 gap-10 relative"
 >
   <Stars />
-  <div class="text-center relative">
+  <div class="text-center relative w-3/4">
     <h1
-      class="text-4xl text-white font-bold sm:text-5xl mb-5 glow-effect lg:glow-effect"
+      class="text-4xl text-white font-bold sm:text-5xl mb-5 glow-effect lg:glow-effect
+      animate-wiggle animate-infinite animate-duration-[1500ms]"
     >
       ¡Contáctanos!
     </h1>
+    <h2 class="text-2xl mb-4">¿Tienes alguna pregunta, quieres reservar al grupo para un evento o simplemente saludarnos? 
+      <br>¡No dudes en escribirnos!</h2>
+      <a href="https://wa.me/2229205162?text=Hola,%20me%20gustar%C3%ADa%20reservar%20a%20Grupo-F5."
+      target="_blank"
+      class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full shadow-md transition duration-300 ease-in-out">
+      <img
+      src="./WhatsApp.svg"
+      alt="chat on whatsapp"
+      class="w-3 h-3 md:w-5 md:h-5 lg:w-6 lg:h-6 mr-2"
+    />
+     Reservar por WhatsApp
+   </a>
+    <h2 class="text-2xl mt-5">
+      O si prefieres, puedes llamarnos al número que aparece en la parte inferior de la página.
+    </h2>
   </div>
 </section>
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
   <div class="max-w-5xl mx-auto">
     <h2
-      class="text-4xl font-bold text-center mb-12 animate-bounce animate-infinite animate-duration-[1500ms] animate-delay-[314ms] animate-ease-linear animate-normal"
+      class="text-4xl font-bold text-center mb-12"
     >
       Próximos Eventos
     </h2>
