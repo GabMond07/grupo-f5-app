@@ -7,63 +7,66 @@
 // - imageUrl: URL de la imagen alusiva al género
 ---
 
-<div class="genre-card relative rounded-lg overflow-hidden bg-gray-900 cursor-pointer hover:shadow-lg transition-shadow duration-300" data-genre-id={Astro.props.genreId}>
-    <div class="aspect-square">
-      <img 
-        src={Astro.props.imageUrl} 
-        alt={`Género: ${Astro.props.genreName}`} 
-        class="w-full h-full object-cover"
-      />
-    </div>
-    <div class="p-3 text-white">
-      <h3 class="text-xl font-bold truncate">{Astro.props.genreName}</h3>
-      <p class="text-sm text-gray-400">{Astro.props.songCount} canciones</p>
-    </div>
+<div
+  class="genre-card relative rounded-lg overflow-hidden bg-gray-900 cursor-pointer hover:shadow-lg transition-shadow duration-300"
+  data-genre-id={Astro.props.genreId}
+>
+  <div class="aspect-square">
+    <img
+      src={Astro.props.imageUrl}
+      alt={`Género: ${Astro.props.genreName}`}
+      class="w-full h-full object-cover"
+    />
   </div>
-  
-  <script>
-    // Script para manejar los clics en las tarjetas de género
-    document.addEventListener('DOMContentLoaded', () => {
-      const genreCards = document.querySelectorAll('.genre-card');
-      
-      genreCards.forEach(card => {
-        card.addEventListener('click', () => {
-          const genreId = card.getAttribute('data-genre-id');
-          const dialog = document.getElementById(`dialog-${genreId}`);
-          if (dialog) {
-            dialog.showModal();
-            document.body.classList.add('overflow-hidden');
-          }
-        });
-      });
-      
-      // Cerrar los diálogos
-      const closeButtons = document.querySelectorAll('.dialog-close');
-      closeButtons.forEach(button => {
-        button.addEventListener('click', () => {
-          const dialog = button.closest('dialog');
-          if (dialog) {
-            dialog.close();
-            document.body.classList.remove('overflow-hidden');
-          }
-        });
-      });
-      
-      // Cerrar al hacer clic fuera del diálogo
-      const dialogs = document.querySelectorAll('dialog');
-      dialogs.forEach(dialog => {
-        dialog.addEventListener('click', (e) => {
-          const dialogDimensions = dialog.getBoundingClientRect();
-          if (
-            e.clientX < dialogDimensions.left ||
-            e.clientX > dialogDimensions.right ||
-            e.clientY < dialogDimensions.top ||
-            e.clientY > dialogDimensions.bottom
-          ) {
-            dialog.close();
-            document.body.classList.remove('overflow-hidden');
-          }
-        });
+  <div class="p-3 text-white">
+    <h3 class="text-xl font-bold truncate">{Astro.props.genreName}</h3>
+    <p class="text-sm text-gray-400">{Astro.props.songCount} canciones</p>
+  </div>
+</div>
+
+<script>
+  // Script para manejar los clics en las tarjetas de género
+  document.addEventListener("DOMContentLoaded", () => {
+    const genreCards = document.querySelectorAll(".genre-card");
+
+    genreCards.forEach((card) => {
+      card.addEventListener("click", () => {
+        const genreId = card.getAttribute("data-genre-id");
+        const dialog = document.getElementById(`dialog-${genreId}`);
+        if (dialog) {
+          dialog.showModal();
+          document.body.classList.add("overflow-hidden");
+        }
       });
     });
-  </script>
+
+    // Cerrar los diálogos
+    const closeButtons = document.querySelectorAll(".dialog-close");
+    closeButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const dialog = button.closest("dialog");
+        if (dialog) {
+          dialog.close();
+          document.body.classList.remove("overflow-hidden");
+        }
+      });
+    });
+
+    // Cerrar al hacer clic fuera del diálogo
+    const dialogs = document.querySelectorAll("dialog");
+    dialogs.forEach((dialog) => {
+      dialog.addEventListener("click", (e) => {
+        const dialogDimensions = dialog.getBoundingClientRect();
+        if (
+          e.clientX < dialogDimensions.left ||
+          e.clientX > dialogDimensions.right ||
+          e.clientY < dialogDimensions.top ||
+          e.clientY > dialogDimensions.bottom
+        ) {
+          dialog.close();
+          document.body.classList.remove("overflow-hidden");
+        }
+      });
+    });
+  });
+</script>
