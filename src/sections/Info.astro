@@ -7,19 +7,19 @@ import Stars from "../components/Stars.astro";
 </script>
 <section
   id="about"
-  class="min-h-screen flex flex-col items-center justify-center py-10 md:py-24 lg:py-20"
+  class="min-h-screen flex flex-col items-center justify-center py-12 md:py-14"
 >
   <div
-    class="flex flex-col md:flex-col md:gap-0 md:py-20 lg:flex-row lg:gap-5 lg:py-10"
+    class="flex flex-col md:flex-col md:gap-3 md:py-20 lg:flex-row lg:gap-2 lg:w-full"
   >
     <div
-      class="w-[350px] h-[470px] md:w-[400px] lg:w-[500px] flex items-center justify-center"
+      class="w-[350px] h-[470px] md:h-[500px] md:w-auto lg:w-1/2 flex items-center justify-center lg:p-7"
     >
-      <div class="p-5 flex flex-col items-center text-center">
+      <div class="p-5 lg:p-0 flex flex-col items-center text-center">
         <Stars />
-        <h1 class="text-4xl text-center md:text-4xl font-bold glow-effect">
+        <h2 class="text-4xl text-center md:text-4xl font-bold glow-effect">
           ¡Nosotros ponemos la música y<br /> ustedes el ambiente!
-        </h1>
+        </h2>
         <h2 class="text-2xl mt-5">
           Con una rica mezcla de ritmos y estilos nuestra música te hará bailar
           y vibrar.
@@ -29,7 +29,7 @@ import Stars from "../components/Stars.astro";
           target="_blank"
           rel="noopener noreferrer"
           class="text-black text-2xl bg-white
-            border-[3px] border-white rounded-full font-extrabold
+            border-[3px] border-cyan-100 rounded-full font-extrabold
             px-6 py-3 mt-10 hover:bg-black hover:text-white
             transition-colors duration-300 lg:px-4 lg:py-2 lg:text-xl"
           ><h1>Agendar fecha 🗓️</h1></a
@@ -42,43 +42,43 @@ import Stars from "../components/Stars.astro";
       </div>
     </div>
     <div
-      class="w-auto h-[370px] md:w-full md:h-[450px] lg:w-[550px] lg:h-[450px] felx flex-col items-center justify-center"
+      class="w-auto h-[370px] md:w-full md:h-[450px] lg:w-1/2 lg:h-full felx flex-col items-center justify-center"
     >
       <div class="mt-0 flex items-center justify-center">
         <div
-          class="glow-effect-1 w-[280px] h-[280px] md:w-[400px] md:h-[370px] lg:w-[400px] lg:h-[380px]"
+          class="glow-effect-1 w-[280px] h-[280px] md:w-[470px] md:h-[450px] lg:w-[400px] lg:h-[380px]"
         >
         </div>
         <img
           src="members.avif"
           alt="Miembros del grupo F-5"
-          class="mt-0 rounded-4xl z-20 w-auto h-[320px] md:h-[410px] lg:h-[450px]"
+          class="mt-0 rounded-4xl z-20 w-auto h-[320px] md:h-[500px] lg:h-[450px]"
         />
       </div>
     </div>
   </div>
   <div
-    class="flex flex-col items-center justify-center w-full h-min-screen mt-2"
+    class="flex flex-col items-center justify-center w-full h-min-screen mt-2 lg:mt-0"
   >
     <div class="flex flex-col items-center justify-center mt-5 p-2">
-      <div class="w-fit lg:w-1/2 flex flex-col justify-center items-center sm:m-3 lg:m-5 bg-radial-[at_25%_25%]  to-zinc-900 to-75% backdrop-blur-sm rounded-2xl p-4">
-        <h2 class="fade-right text-2xl text-center mb-5">
+      <div class="fade-right w-fit lg:w-1/2 flex flex-col justify-center items-center m-4 lg:m-5 bg-radial-[at_25%_25%]  to-zinc-900 to-75% backdrop-blur-sm rounded-2xl p-4">
+        <h2 class="text-2xl text-center mb-5">
           !Sus amigos de <span class="neon-effect text-3xl"
             >Grupo F-5</span
           >!<br />
           músicos apasionados y profesionales, con más 7 años de experiencia en la
           industria musical.
         </h2>
-        <h2 class="fade-right text-2xl text-center">
+        <h2 class="text-2xl text-center">
           Nos encargamos de todos los detalles, desde la selección del
           repertorio hasta la producción del sonido, para que tú solo te
           preocupes de disfrutar
         </h2>
       </div>
       <div
-        class="w-fit lg:w-1/2 flex flex-col justify-center items-center m-4 mt-5"
+        class="w-fit lg:w-1/2 flex flex-col justify-center items-center m-2 mt-5"
       >
-        <h1 class="gradient-text text-4xl mb-4">¿Qué ofrecemos?</h1>
+        <h2 class="gradient-text text-4xl mb-4">¿Qué ofrecemos?</h2>
         <ul class="text-2xl text-center lg:text-start">
           <li class="fade-zoom list">
             🎼​ Música en vivo de alta calidad para todo tipo de eventos
@@ -95,8 +95,6 @@ import Stars from "../components/Stars.astro";
           </li>
         </ul>
       </div>
-    </div>
-    <div class="flex flex-col items-center justify-center">
     </div>
   </div>
 </section>
