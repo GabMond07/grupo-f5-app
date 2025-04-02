@@ -11,6 +11,15 @@ importers:
       '@fontsource-variable/jost':
         specifier: ^5.2.5
         version: 5.2.5
+      '@fontsource-variable/playfair-display':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource-variable/rubik':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/prata':
+        specifier: ^5.2.5
+        version: 5.2.5
       '@tailwindcss/vite':
         specifier: ^4.0.12
         version: 4.0.12(vite@6.2.1(jiti@2.4.2)(lightningcss@1.29.2))
@@ -20,6 +29,10 @@ importers:
       tailwindcss:
         specifier: ^4.0.12
         version: 4.0.12
+    devDependencies:
+      tailwindcss-animated:
+        specifier: ^2.0.0
+        version: 2.0.0(tailwindcss@4.0.12)
 
 packages:
 
@@ -212,6 +225,15 @@ packages:
 
   '@fontsource-variable/jost@5.2.5':
     resolution: {integrity: sha512-oIMcK8O9zEhGXR0wrqNLPotRb4uI7ixfQtrBF03kZyYtdIrLBAuEJuRfHWZAZiH2iKnXco1atEGNuHgM7PDN0g==}
+
+  '@fontsource-variable/playfair-display@5.2.5':
+    resolution: {integrity: sha512-nzSCC5pbWHjkJBqjPe81cPIC7fqJ6U5DwJ6tec7vF1bQ2DJnaKRBZluRQJuseFpACZLTN8LeN/1gBQEA7PnKOw==}
+
+  '@fontsource-variable/rubik@5.2.5':
+    resolution: {integrity: sha512-6tXqnHFA9/ItIEODfH5LrzLSmcNE5TXD8OuXx14cvmS7j1zX4JgEHjYrhlWhLGuBXXzrOnz0A0oMheMMbXwmWA==}
+
+  '@fontsource/prata@5.2.5':
+    resolution: {integrity: sha512-uDyW0Yb8YMcTBmSflYvjpqEVwDTLw/zUeQjf8Sv5YZRuXM4q+JPaRaeN+mxe1omAjjpM3Dwx+ryw0uyTjfOv0g==}
 
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
@@ -1357,6 +1379,11 @@ packages:
     resolution: {integrity: sha512-vavAMRXOgBVNF6nyEEmL3DBK19iRpDcoIwW+swQ+CbGiu7lju6t+JklA1MHweoWtadgt4ISVUsXLyDq34ddcwA==}
     engines: {node: '>=4'}
 
+  tailwindcss-animated@2.0.0:
+    resolution: {integrity: sha512-anNNGpxNgjydD8p1lcJjxxH+XbjW6KR8Xs29owTrbcf3tOJ6IRblpyFob43HBkfxFJJTAfFQqugoEG2b1EsR0A==}
+    peerDependencies:
+      tailwindcss: '>=3.1.0 || >=4.0.0'
+
   tailwindcss@4.0.12:
     resolution: {integrity: sha512-bT0hJo91FtncsAMSsMzUkoo/iEU0Xs5xgFgVC9XmdM9bw5MhZuQFjPNl6wxAE0SiQF/YTZJa+PndGWYSDtuxAg==}
 
@@ -1755,6 +1782,12 @@ snapshots:
     optional: true
 
   '@fontsource-variable/jost@5.2.5': {}
+
+  '@fontsource-variable/playfair-display@5.2.5': {}
+
+  '@fontsource-variable/rubik@5.2.5': {}
+
+  '@fontsource/prata@5.2.5': {}
 
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:
@@ -3187,6 +3220,10 @@ snapshots:
       ansi-regex: 6.1.0
 
   strip-bom@3.0.0: {}
+
+  tailwindcss-animated@2.0.0(tailwindcss@4.0.12):
+    dependencies:
+      tailwindcss: 4.0.12
 
   tailwindcss@4.0.12: {}
 
