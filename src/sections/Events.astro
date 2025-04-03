@@ -18,25 +18,26 @@ const events = [
 </script>
 <section
   id="events"
-  class="py-7 lg:py-24 flex flex-col justify-center items-center p-2 lg:p-10 lg:gap-10"
+  class="py-11 lg:py-24 flex flex-col justify-center items-center p-2 lg:p-10 lg:gap-10"
 >
   <Stars />
-  <div class="py-10 text-center w-full lg:w-3/4 m-4">
+  <div class="py-10 text-center w-full lg:w-3/4 p-2 relative">
+    <Stars />
     <h2
-      class="fade-right text-4xl text-white font-bold sm:text-5xl mb-5 glow-effect lg:glow-effect
+      class="fade-right text-4xl text-white font-bold mb-10 glow-effect lg:glow-effect
       animate-wiggle animate-infinite animate-duration-[1500ms]"
     >
       ¡Contáctanos!
-    </h2>
-    <h2 class="fade-right text-2xl mb-4">
+    </h2> 
+    <p class="fade-right text-xl mb-8">
       ¿Tienes alguna pregunta, quieres reservar al grupo para un evento o
       simplemente saludarnos?
       <br />¡No dudes en escribirnos!
-    </h2>
+    </p>
     <a
       href="https://wa.me/2229205162?text=Hola,%20me%20gustar%C3%ADa%20reservar%20a%20Grupo-F5."
       target="_blank"
-      class="fade-right inline-flex text-2xl items-center bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-6 lg:py-2 lg:px-4 rounded-full shadow-md transition duration-300 ease-in-out"
+      class="mb-8 fade-right inline-flex text-xl items-center bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 lg:py-2 lg:px-4 rounded-full shadow-md transition duration-300 ease-in-out"
     >
       <img
         src="./WhatsApp.svg"
@@ -45,12 +46,13 @@ const events = [
       />
       Reservar por WhatsApp
     </a>
-    <h2 class="fade-right text-2xl mt-5">
+    <h2 class="fade-right text-2xl">
       O si prefieres, puedes llamarnos al número 222-920-5162.
     </h2>
   </div>
 </section>
-<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-5 m-2">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-5 m-2 relative">
+  <Stars />
   <div class="max-w-5xl mx-auto">
     <h2 class="glow-effect text-4xl font-bold text-center mb-12">
       Próximos Eventos
@@ -58,7 +60,7 @@ const events = [
 
     <div
       id="card-event"
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 m-5"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 "
     >
       {
         events.map((event) => (
