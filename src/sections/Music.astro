@@ -1,6 +1,7 @@
 ---
 import MusicGenreCard from "../components/MusicGenreCard.astro";
 import Genres from "../components/Genres.astro";
+import Stars from "../components/Stars.astro";
 ---
 
 <script>
@@ -8,8 +9,9 @@ import Genres from "../components/Genres.astro";
 </script>
 <section
   id="music"
-  class="min-h-screen flex flex-col justify-center items-center p-4 lg:p-20 py-20 md:py-16 lg:py-20"
+  class="min-h-screen flex flex-col justify-center items-center p-4 lg:p-20 py-20 md:py-16 lg:py-20 relative"
 >
+<Stars />
   <h1
     class="text-3xl md:text-4xl lg:text-5xl text-center font-bold mb-8 glow-effect"
   >
@@ -17,7 +19,7 @@ import Genres from "../components/Genres.astro";
   </h1>
 
   <div
-    class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-4 lg:gap-10"
+    class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-4 lg:gap-10"
   >
     <div
       class="fade-zoom col-span-1 hover:scale-105 transition-transform duration-300 w-auto"
