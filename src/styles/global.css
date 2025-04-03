@@ -196,7 +196,7 @@ p {
   width: 10px;
   height: 10px;
   top: 15%;
-  left: 20%;
+  left: 10%;
   animation-delay: 0.3s;
   animation-duration: 3.5s;
 }
@@ -259,7 +259,7 @@ p {
   width: 5px;
   height: 5px;
   top: 88%;
-  left: 15%;
+  left: 5%;
   animation-delay: 1.5s;
   animation-duration: 4.2s;
 }
@@ -283,11 +283,11 @@ p {
   transform: translateX(50px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out, box-shadow 0.4s,
   background 0.4s;
-  padding: 12px 20px;
+  padding: 8px 15px;
   margin: 10px auto;
   display: flex;
   align-items: center;
-  background: linear-gradient(300deg, rgba(25, 79, 255, 0.91), #0e0e0ec0);
+  background: linear-gradient(300deg, rgba(30, 72, 208, 0.91), #0e0e0ec0);
   border-radius: 12px;
   box-shadow: 2px 2px 8px rgba(139, 139, 139, 0.1);
   overflow: hidden;
