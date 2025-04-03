@@ -10,6 +10,10 @@
 
 html {
   font-family: var(--font-playfair);
+}
+
+body {
+  margin: 0;
   background-color: #000;
   color: #fff;
   background: linear-gradient(to right, #000000, #050505);
@@ -51,8 +55,10 @@ p {
 }
 
 .glow-effect {
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.651),
-    0 0 15px rgba(255, 255, 255, 0.4), 0 0 20px rgba(255, 255, 255, 0.2);
+  text-shadow:
+  0 0 10px rgba(255, 255, 255, 0.651),
+  0 0 15px rgba(255, 255, 255, 0.4),
+  0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 .neon-effect {
@@ -270,31 +276,20 @@ p {
   transform: translateX(0);
 }
 
-.fade-left {
-  opacity: 0;
-  transform: translateX(50px);
-  transition: opacity 2s ease-out, transform 1s ease-out;
-}
-
-.fade-left.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
 /* Animación de lista */
 .list {
   position: relative;
   opacity: 0;
   transform: translateX(50px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out, box-shadow 0.4s,
-    background 0.4s;
+  background 0.4s;
   padding: 12px 20px;
   margin: 10px auto;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, #0f0f0f, #222222);
+  background: linear-gradient(300deg, rgba(25, 79, 255, 0.91), #0e0e0ec0);
   border-radius: 12px;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 8px rgba(139, 139, 139, 0.1);
   overflow: hidden;
   color: rgb(255, 255, 255);
   z-index: -1;
