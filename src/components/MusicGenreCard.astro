@@ -28,27 +28,46 @@
   // Script para manejar los clics en las tarjetas de género
   document.addEventListener("DOMContentLoaded", () => {
     const genreCards = document.querySelectorAll(".genre-card");
+    
+    // Flag para controlar si un diálogo está abierto
+    let dialogIsOpen = false;
 
     genreCards.forEach((card) => {
       card.addEventListener("click", () => {
         const genreId = card.getAttribute("data-genre-id");
         const dialog = document.getElementById(`dialog-${genreId}`);
         if (dialog) {
+          // Añadir una entrada al historial antes de abrir el diálogo
+          if (!dialogIsOpen) {
+            history.pushState({ dialogOpen: true }, '');
+            dialogIsOpen = true;
+          }
+          
           dialog.showModal();
           document.body.classList.add("overflow-hidden");
         }
       });
     });
 
-    // Cerrar los diálogos
+    // Función para cerrar el diálogo correctamente
+    function closeDialog(dialog) {
+      if (dialog) {
+        dialog.close();
+        document.body.classList.remove("overflow-hidden");
+        dialogIsOpen = false;
+      }
+    }
+
+    // Cerrar los diálogos con botones de cierre
     const closeButtons = document.querySelectorAll(".dialog-close");
     closeButtons.forEach((button) => {
       button.addEventListener("click", () => {
         const dialog = button.closest("dialog");
-        if (dialog) {
-          dialog.close();
-          document.body.classList.remove("overflow-hidden");
-        }
+        closeDialog(dialog);
+        // Si presionamos el botón de cerrar, también volvemos en el historial
+        // if (window.history.state && window.history.state.dialogOpen) {
+        //   window.history.back();
+        // }
       });
     });
 
@@ -63,18 +82,26 @@
           e.clientY < dialogDimensions.top ||
           e.clientY > dialogDimensions.bottom
         ) {
-          dialog.close();
-          document.body.classList.remove("overflow-hidden");
+          closeDialog(dialog);
+          // Si hacemos clic fuera, también volvemos en el historial
+          if (window.history.state && window.history.state.dialogOpen) {
+            window.history.back();
+          }
         }
+      });
+      
+      // Capturar el evento de cierre del diálogo nativo
+      dialog.addEventListener("close", () => {
+        document.body.classList.remove("overflow-hidden");
+        dialogIsOpen = false;
       });
     });
 
     // Escuchar el evento popstate para manejar el botón de Atrás
-      window.addEventListener("popstate", () => {
-      const openDialogs = document.querySelectorAll("dialog");
+    window.addEventListener("popstate", () => {
+      const openDialogs = document.querySelectorAll("dialog[open]");
       openDialogs.forEach((dialog) => {
-        dialog.close();
-        document.body.classList.remove("overflow-hidden");
+        closeDialog(dialog);
       });
     });
   });
