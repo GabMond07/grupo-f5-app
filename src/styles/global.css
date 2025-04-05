@@ -70,7 +70,7 @@ p {
 #about {
   animation: reveal linear both;
   animation-timeline: scroll();
-  animation-range: entry 0% cover 17%;
+  animation-range: entry 0% cover 12%;
 }
 
 #card-event {
