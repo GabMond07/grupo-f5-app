@@ -71,7 +71,7 @@
 
     // Escuchar el evento popstate para manejar el botón de Atrás
       window.addEventListener("popstate", () => {
-      const openDialogs = document.querySelectorAll("dialog[open]");
+      const openDialogs = document.querySelectorAll("dialog");
       openDialogs.forEach((dialog) => {
         dialog.close();
         document.body.classList.remove("overflow-hidden");
