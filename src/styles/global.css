@@ -6,10 +6,8 @@
   --font-prata: "Prata", serif;
   --font-rubik: "Rubik", sans-serif;
   --font-playfair: "Playfair Display", serif;
-}
-
-html {
   font-family: var(--font-playfair);
+
 }
 
 body {
